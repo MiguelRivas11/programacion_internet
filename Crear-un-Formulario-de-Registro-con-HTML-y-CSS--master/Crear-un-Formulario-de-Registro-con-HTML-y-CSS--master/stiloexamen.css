@@ -1,0 +1,90 @@
+nav {
+    width: 100%;
+    background-color: #303030;
+    margin-top: 0;
+    display: flex;
+    padding-left: 5px;
+    flex-direction: row;
+    align-items: flex-start;
+    z-index: 99;
+    top: 0;
+    position: sticky;
+  }
+  
+  nav a {
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 15px;
+  }
+  
+  nav a:not(:last-of-type) {
+    border-right: 2px solid gray;
+  }
+  
+  nav a:hover {
+    color: darkviolet;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    nav {
+      flex-direction: column;
+    }
+    nav a:not(:last-of-type) {
+      border-right: unset;
+      border-bottom: 2px solid gray;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .total {
+    text-align: right;
+    font-weight: bold;
+  }
+  .description {
+    margin-bottom: 20px;
+  }
+  .buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .buy-button:hover {
+    background-color: #45a049;
+  }

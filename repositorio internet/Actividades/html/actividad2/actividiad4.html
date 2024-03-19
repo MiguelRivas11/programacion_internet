@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sesión 6 - Actividad 3</title>
+
+    <style>
+        td {
+            text-align: center;
+        }
+
+        #warning {
+            background-color: orangered;
+            color: white;
+        }
+        .pos{
+            background-color: #90ee90;
+        }
+
+        [data-val="pos"]{
+            background-color: #ffb6c1;
+            font-size: xx-large;
+        }
+
+         table:first-of-type tr:first-child td:nth-child(3n-4){
+            background-color: #add8e6;
+            font-weight: bold;
+            font-size: xx-large;
+         }
+         table:first-of-type tr:last-child td:nth-child(-n+3),
+         table:first-of-type tr:nth-child(4) td:nth-last-child(-n+3){
+            background-color: #20b2aa;
+         }
+        [colspan="2"] {
+            background-color: #f08080;
+        }
+
+        [rowspan="3"] {
+            background-color: #d3d3d3;
+            font-size: xx-large;
+        }
+
+        td[colspan] + td{
+            background-color: #87cefa;
+            font-size: xx-large;
+        }
+         table:nth-of-type(2) tr:nth-child(1) td:nth-child(4),
+        table:nth-of-type(2) tr:nth-child(2) td:nth-child(2), 
+        table:nth-of-type(2) tr:nth-child(3) td:nth-child(3) {
+            background-color: #87cefa;
+            font-size: xx-large;
+        } 
+
+        
+        
+        
+       
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>Cuántos valores puedes atrapar</h1>
+
+    <p>Reglas: </p>
+
+    <ul>
+        <li>Debes hacer que se vea similar a la imagen de solución</li>
+        <li>Cada color representa una regla de CSS </li>
+        <li> <span id="warning"> No añadir atributos o cambiar contenido al HTML </span> </li>
+    </ul>
+
+    <h2>Primera tabla</h2>
+
+    <table border="1" width="800px" height="300spx">
+        <tr>
+            <td>-1</td>
+            <td>2</td>
+            <td data-val="neg">-1</td>
+            <td>-1</td>
+            <td>3</td>
+            <td>-1</td>
+            <td class="pos">1</td>
+            <td>4</td>
+            <td data-val="neg">-1</td>
+            <td>-1</td>
+        </tr>
+        <tr class="pos">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td class="pos">1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td data-val="neg">-1</td>
+            <td class="pos">1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>-1</td>
+            <td data-val="pos">5</td>
+            <td>-1</td>
+            <td class="pos">1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td data-val="pos">1</td>
+        </tr>
+
+    </table>
+
+    <h2>Segunda tabla</h2>
+    <table border="1" width="600px">
+        <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td colspan="3">-1</td>
+            <td>3</td>
+            <td>-1</td>
+            <td rowspan="3">5</td>
+        </tr>
+        <tr>
+            <td colspan="2">1</td>
+            <td>3</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td colspan="2">1</td>
+
+        </tr>
+        <tr>
+            <td>-1</td>
+            <td colspan="2">1</td>
+            <td>3</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+</body>
+
+</html>

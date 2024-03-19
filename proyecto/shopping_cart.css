@@ -1,0 +1,93 @@
+.nav1 {
+    background-color: rgb(53, 58, 64);
+    position: fixed !important;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .navbar-brand {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+}
+
+nav .navbar-brand:hover {
+    color: rgb(153, 156, 161);
+}
+
+nav div .form-control {
+    width: 500px;
+}
+
+nav div .boton__ {
+    color: rgb(153, 156, 161);
+    border: 1px solid rgb(153, 156, 161);
+    margin-right: 10px;
+}
+
+a.dropdown__ {
+    color: rgb(153, 156, 161);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.media {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    border: 1px solid;
+    border: 2px solid rgb(153, 156, 161);
+}
+
+.trash {
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.icon-trash {
+    color: white;
+}
+
+.together {
+    display: flex;
+    justify-content: center;
+}
+.mr-3 {
+    width: 15px;
+    height: auto;
+}
+.container{
+    text-align: center;
+}
+table{
+    margin: 10px auto;
+    border: 20px;
+}
+th, td{
+    padding: 10px;
+    border: 15px;
+}
+.boy-button{
+    display: block;
+    margin-top: 20px;
+    background-color: green;
+}
+img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% de su contenedor */
+    max-width: 200px; /* Establece un ancho máximo para la imagen */
+    display: block; /* Esto ayuda a centrar la imagen horizontalmente */
+    margin: 0 auto; /* Esto centra la imagen horizontalmente */
+  }
+button{
+    background-color: green;
+}

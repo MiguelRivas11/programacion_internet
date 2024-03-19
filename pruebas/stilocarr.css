@@ -1,0 +1,19 @@
+.col-md-3{
+  margin-top: 1000 px;
+}
+.container-fluid.d-flex {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  justify-content: flex-start; /* Alinea los elementos horizontalmente a la izquierda */
+}
+.navbar-brand {
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
+.container{
+  margin-top: 300px;
+}
+#carouselId .carousel-item img {
+  max-width: 100%; /* Establece el ancho máximo al 100% del contenedor padre */
+  height: auto; /* Esto permite que la imagen mantenga su relación de aspecto original */
+  margin: auto; /* Centra la imagen horizontalmente */
+}
