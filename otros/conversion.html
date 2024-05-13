@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body {
+            margin: 5; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            background-color: #f0f0f0; 
+        }
+        .conversion_base {
+            padding: 20px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            border-radius: 8px; 
+        }
+        .suma_binario{
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            border-radius: 8px;
+        }
+        input, button {
+            margin-top: 8px; 
+        }
+        h3 {
+            margin: 10px 0; 
+        }
+    </style>
+
+</head>
+<body>
+    <div class="conversion_base">
+        <h3>Decimal</h3>
+        <input type="number" id="decimalInput">
+        <br>
+        <h3>Base</h3>
+        <input type="number" id="baseInput" min="2" max="36"> 
+        <button id="convertButton">Convertir</button>
+        <h3>Resultado</h3>
+        <label id="resultLabel">r</label>
+    </div>
+    <div class="suma_binario">
+        <h3>Numero Binario 1</h3>
+        <input type="text" id="binariInput1">
+        <br>
+        <h3>Nuemro Binario 2</h3>
+        <input type="text" id="binaryInput2"> 
+        <button id="sumButton">Sumar</button>
+        <h3>Resultado</h3>
+        <label id="resultLabel">r</label>
+    </div>
+
+    <script src="converson.js"></script>
+    <script>
+        document.getElementById('sumButton').addEventListener('click', function() {
+    var binary1 = document.getElementById('binaryInput1').value;
+    var binary2 = document.getElementById('binaryInput2').value;
+
+    // Validación de números binarios
+    if (!isBinary(binary1) || !isBinary(binary2)) {
+        alert("Ingresa números binarios válidos.");
+        return;
+    }
+
+    var result = addBinary(binary1, binary2);
+
+    // Mostrar resultado
+    document.getElementById('resultLabel').textContent = result;
+});
+
+function isBinary(number) {
+    return /^[01]+$/.test(number);
+}
+
+function addBinary(a, b) {
+    let result = '';
+    let carry = 0;
+    let i = a.length - 1;
+    let j = b.length - 1;
+
+    while (i >= 0 || j >= 0 || carry > 0) {
+        const digitA = i >= 0 ? parseInt(a[i]) : 0;
+        const digitB = j >= 0 ? parseInt(b[j]) : 0;
+
+        const sum = digitA + digitB + carry;
+
+        result = (sum % 2) + result;
+        carry = sum >= 2 ? 1 : 0;
+
+        i--;
+        j--;
+    }
+
+    return result;
+}
+
+    </script>
+    
+</body>
+</html>

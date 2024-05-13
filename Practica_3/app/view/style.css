@@ -1,0 +1,27 @@
+.d-block {
+  height:360px;
+}
+
+.shop {
+  height:30px;
+}
+
+.card-img-top {
+  max-width: 200px;
+  width:100%;
+  margin:0 auto;
+}
+
+
+.shop-img {
+  max-width: 200px;
+  min-width: 150px;
+  width:100%;
+}
+
+.cards_pad  {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}

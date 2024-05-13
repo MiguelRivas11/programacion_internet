@@ -1,0 +1,43 @@
+[
+	{"try":3129312, 			
+	"uuid":"M1_UU1D_123456", 
+	"title":"Platano A",
+	"description":"Los mejores platanos de México, directo desde Tabasco.",
+	"imageUrl":"https://images.freeimages.com/images/large-previews/4ec/banana-s-1326714.jpg",
+	"unit":"pieza",
+	"stock":15,
+	"pricePerUnit":10,
+	"category":"Fruta"},
+	
+	{"title":"Pera B",
+	"description":"Esta es la descripción del producto.",
+	"imageUrl":"https://images.freeimages.com/images/large-previews/4ec/banana-s-1326714.jpg",
+	"unit":"pieza",
+	"stock":15,
+	"pricePerUnit":20,
+	"category":"Fruta"},
+	
+	{"title":"Jitomate C",
+	"description":"La descripcion contiene número 12345 y caracteres especiales ñ.-/?%.",
+	"imageUrl":"https://images.freeimages.com/images/large-previews/4ec/banana-s-1326714.jpg",
+	"unit":"pieza",
+	"stock":15,
+	"pricePerUnit":1,
+	"category":"Verdura"},
+	
+	{"title":"Lechuga D",
+	"description":"Hello!",
+	"imageUrl":"https://images.freeimages.com/images/large-previews/4ec/banana-s-1326714.jpg",
+	"unit":"pieza",
+	"stock":15,
+	"pricePerUnit":80,
+	"category":"Verdura"},
+	
+	{"title":"Manzana E",
+	"description":"Aqui hice un update de producto",
+	"imageUrl":"https://images.freeimages.com/images/large-previews/4ec/banana-s-1326714.jpg",
+	"unit":"pieza",
+	"stock":15,
+	"pricePerUnit":1000,
+	"category":"Fruta"}
+]

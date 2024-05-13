@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suma de números binarios</title>
+<style>
+    body{
+        margin: 5;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    .operaciones_binarias{
+        padding: 20px;
+        background-color: white;
+        box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    input, button{
+        margin-top: 4px;
+    }
+    h3{
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="operaciones_binarias">
+        <h3>Numero Binario 1</h3>
+        <input type="text" id="binaryInput1">
+        <br>
+        <h3>Nuemro Binario 2</h3>
+        <input type="text" id="binaryInput2"> 
+        <button id="sumButton">Sumar</button>
+        <button id="subtractButton">Restar</button>
+        <h3>Resultado</h3>
+        <label id="resultLabel"></label>
+    </div>
+    
+    <script>
+    document.getElementById('sumButton').addEventListener('click', function() {
+        performOperation('sum');
+    });
+    
+    document.getElementById('subtractButton').addEventListener('click', function() {
+        performOperation('subtract');
+    });
+    
+    function performOperation(operation) {
+        var binary1 = document.getElementById('binaryInput1').value;
+        var binary2 = document.getElementById('binaryInput2').value;
+    
+        // Validación de números binarios
+        if (!isBinary(binary1) || !isBinary(binary2)) {
+            alert("Ingresa números binarios válidos.");
+            return;
+        }
+    
+        var result;
+        if (operation === 'sum') {
+            result = addBinary(binary1, binary2);
+        } else if (operation === 'subtract') {
+            result = subtractBinary(binary1, binary2);
+        }
+    
+        // Mostrar resultado
+        document.getElementById('resultLabel').textContent = result;
+    }
+    
+    function isBinary(number) {
+        return /^[01]+$/.test(number);
+    }
+    
+    function addBinary(a, b) {
+        let result = '';
+        let carry = 0;
+        let i = a.length - 1;
+        let j = b.length - 1;
+    
+        while (i >= 0 || j >= 0 || carry > 0) {
+            const digitA = i >= 0 ? parseInt(a[i]) : 0;
+            const digitB = j >= 0 ? parseInt(b[j]) : 0;
+    
+            const sum = digitA + digitB + carry;
+    
+            result = (sum % 2) + result;
+            carry = sum >= 2 ? 1 : 0;
+    
+            i--;
+            j--;
+        }
+    
+        return result;
+    }
+    
+    function subtractBinary(a, b) {
+        let result = '';
+        let borrow = 0;
+        let i = a.length - 1;
+        let j = b.length - 1;
+    
+        while (i >= 0 || j >= 0) {
+            const digitA = i >= 0 ? parseInt(a[i]) : 0;
+            const digitB = j >= 0 ? parseInt(b[j]) : 0;
+    
+            let diff = digitA - digitB - borrow;
+    
+            if (diff < 0) {
+                diff += 2;
+                borrow = 1;
+            } else {
+                borrow = 0;
+            }
+    
+            result = diff + result;
+    
+            i--;
+            j--;
+        }
+    
+        // Remove leading zeros
+        result = result.replace(/^0+/, '');
+    
+        return result === '' ? '0' : result;
+    }
+    </script>
+
+</body>
+</html>
